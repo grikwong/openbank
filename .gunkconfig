@@ -3,11 +3,18 @@ version=v3.9.1
 
 [generate go]
 plugins=grpc
+logtostderr=true
 
-[generate]
-command=protoc-gen-grpc-gateway
+[generate java]
+out=./java/.
+lite
 
 [generate swagger]
 
 [generate]
-command=docgen
+command=protoc-gen-grpc-gateway
+
+[generate]
+protoc=grpc-java
+out=./java/.
+lite

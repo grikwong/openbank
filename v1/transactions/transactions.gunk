@@ -1,3 +1,5 @@
+// +gunk java.Package("to.bnk.api.transactions")
+// +gunk java.MultipleFiles(true)
 // +gunk openapiv2.Swagger{
 //         Swagger: "2.0",
 //         Info: openapiv2.Info{
@@ -51,6 +53,7 @@ package transactions
 import (
 	"time"
 
+	"github.com/gunk/opt/file/java"
 	"github.com/gunk/opt/http"
 	"github.com/gunk/opt/openapiv2"
 
@@ -131,7 +134,7 @@ type BankAccountInfo struct {
 	AccountID string `pb:"1" json:"account_id"`
 
 	// BankCode is code of the bank the account belongs to.
-	BankCode types.BankCode `pb:"2" json:"bank_code"`
+	BankCode string `pb:"2" json:"bank_code"`
 
 	// OwnerName is the name of the owner of the account.
 	OwnerName string `pb:"3" json:"owner_name"`
