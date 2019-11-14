@@ -1,3 +1,5 @@
+// +gunk java.Package("to.bnk.api.counterparty")
+// +gunk java.MultipleFiles(true)
 // +gunk openapiv2.Swagger{
 //         Swagger: "2.0",
 //         Info: openapiv2.Info{
@@ -54,6 +56,7 @@ package counterparty
 import (
 	"time"
 
+	"github.com/gunk/opt/file/java"
 	"github.com/gunk/opt/http"
 	"github.com/gunk/opt/openapiv2"
 
